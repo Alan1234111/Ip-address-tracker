@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        position: fixed;
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      #map {
+        height: 70vh;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <p>IP Address Tracker</p>
+      <form action="">
+        <input type="text" placeholder="Search for any IP address or domain" />
+        <!-- IP Address Location Timezone UTC -->
+        <button class="submit">
+          <img
+            src="/images/icon-arrow.svg"
+            alt="+
+          -"
+          />
+        </button>
+      </form>
+    </nav>
+
+    <!-- add offset value dynamically using the API -->
+
+    <header>
+      <div class="ip"></div>
+    </header>
+
+    <aside class="information">
+      <section class="adress">
+        <p>IP ADDRESS</p>
+        <span class="adress"></span>
+      </section>
+      <section class="location">
+        <p>LOCATION</p>
+        <span class="location"></span>
+      </section>
+      <section class="time">
+        <p>TIMEZONE</p>
+        <span class="time"></span>
+      </section>
+      <section class="isp">
+        <p>ISP</p>
+        <span class="isp"></span>
+      </section>
+    </aside>
+
+    <div id="map"></div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      ;
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      ;
+      crossorigin=""
+      ;
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>

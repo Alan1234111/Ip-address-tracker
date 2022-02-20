@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --VeryDarkGray: hsl(0, 0%, 17%);
+  --DarkGray: hsl(0, 0%, 59%);
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+nav {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav p {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+nav input {
+  width: 40vw;
+  padding: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  letter-spacing: 2px;
+}
+
+nav button {
+  padding: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.ip {
+  background-image: url(/images/pattern-bg.png);
+  background-size: cover;
+  height: 30vh;
+  width: 100vw;
+}
+
+.information {
+  display: flex;
+  flex-grow: 0;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80vw;
+  height: clamp(5vh, 30%, 14vh);
+  background-color: white;
+  z-index: 1;
+  border-radius: 15px;
+}
+
+.information section {
+  width: 25%;
+  font-weight: 700;
+  margin: 30px 0 20px 20px;
+}
+
+section.adress,
+section.location,
+section.time {
+  border-right: 1px var(--DarkGray) solid;
+}
+
+.information span {
+  font-size: 18px;
+}
+
+.information section p {
+  margin-bottom: 15px;
+  color: var(--DarkGray);
+}
+
+#map {
+  z-index: 0;
+}
+
+@media (orientation: portrait) {
+  nav {
+    width: 100%;
+    left: 50%;
+  }
+
+  nav input {
+    width: 80%;
+  }
+
+  nav form {
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .information {
+    flex-direction: column;
+    align-items: center;
+    height: 30vh;
+  }
+
+  .information section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    border: none;
+  }
+
+  .information section p {
+    font-size: 12px;
+  }
+
+  .information span {
+    font-size: 16px;
+  }
+
+  .leaflet-control-zoom {
+    position: fixed;
+    top: 90%;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 380px) {
+  nav p {
+    position: fixed;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px;
+  }
+
+  nav form {
+    top: 5%;
+  }
+
+  .information section p {
+    margin: 0;
+  }
+
+  .information {
+    flex-direction: column;
+    align-items: center;
+    height: 30vh;
+  }
+
+  .information section p {
+    font-size: 10px;
+  }
+
+  .information span {
+    font-size: 12px;
+  }
+
+  .leaflet-control-zoom {
+    position: fixed;
+    top: 80%;
+  }
+}
