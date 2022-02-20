@@ -51,7 +51,7 @@ nav button {
 }
 
 .ip {
-  background-image: url(/images/pattern-bg.png);
+  background-image: url(images/pattern-bg.png);
   background-size: cover;
   height: 30vh;
   width: 100vw;
